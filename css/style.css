@@ -132,6 +132,7 @@ body {
 
 #hamburger-menu {
   display: none;
+  color: white;
 }
 /* hero sectiom */
 .hero {
@@ -378,6 +379,8 @@ footer .credit a {
 
   .navbar .navbar-nav {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 100%;
     right: -100%;
     background-color: #fff;
