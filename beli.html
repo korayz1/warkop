@@ -20,8 +20,15 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    
+    <!--AlpineJs-->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!--apps-->
+    <script src="src/app.js"></script>
   </head>
-  <body>
+
+    <body>
+      
     <!-- navbar start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">warkop<span>indomie</span>.</a>
@@ -30,6 +37,7 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
         <a href="#menu">Menu</a>
+        <a href="#products">Pesan</a>
         <a href="#contact">Kontak</a>
         <div class="search-box">
           <input type="text" class="search-input" placeholder="Search">
@@ -110,7 +118,7 @@
     <!-- abbout section end-->
 
     <!--menu section start-->
-    <section id="menu" class="menu">
+    <section id="menu" class="menu" x-data="menus">
       <h2 data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"><span>Menu</span> Kami</h2>
       <p data-aos="fade-up"
@@ -119,12 +127,12 @@
     <div class="row">
       <div data-aos="fade-down"
       data-aos-easing="linear"
-      data-aos-duration="1000"class="menu-card">
+      data-aos-duration="1000" class="menu-card">
         <img src="img/warbg20.jpg" alt="indomiekuah" class="menu-card-img">
         <h3 class="menu-card-title">- indomie goreng spesial -</h3>
         <p class="deskripsi-card"> indomie+telor</p>
         <p class="menu-card-price">IDR 10k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -133,7 +141,7 @@
         <h3 class="menu-card-title">- bubur kacang ijo -</h3>
         <p class="deskripsi-card"> campur/ketan </p>
         <p class="menu-card-price">IDR 6k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -142,7 +150,7 @@
         <h3 class="menu-card-title">- Indomie kuah -</h3>
         <p class="deskripsi-card"> indomie+telor</p>
         <p class="menu-card-price">IDR 10k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -151,7 +159,7 @@
         <h3 class="menu-card-title">- Kopi -</h3>
         <p class="deskripsi-card"> panas/dingin </p>
         <p class="menu-card-price">IDR 3k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       
       <div data-aos="fade-down"
@@ -161,7 +169,7 @@
         <h3 class="menu-card-title">- Gorengan -</h3>
         <p class="deskripsi-card"> risol tahu tempe bakwan</p>
         <p class="menu-card-price">IDR 2k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -170,7 +178,7 @@
         <h3 class="menu-card-title">- Bubur Ayam -</h3>
         <p class="deskripsi-card"> bubur ayam complit </p>
         <p class="menu-card-price">IDR 8k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -179,7 +187,7 @@
         <h3 class="menu-card-title">- susu Indomilk -</h3>
         <p class="deskripsi-card"> panas/dingin </p>
         <p class="menu-card-price">IDR 5k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -188,7 +196,7 @@
         <h3 class="menu-card-title">- MiLo -</h3>
         <p class="deskripsi-card"> panas/dingin </p>
         <p class="menu-card-price">IDR 5k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -197,7 +205,7 @@
         <h3 class="menu-card-title">- Extra-joss -</h3>
         <p class="deskripsi-card"> dingin </p>
         <p class="menu-card-price">IDR 5k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -206,7 +214,7 @@
         <h3 class="menu-card-title">- Nutrisari jeruk -</h3>
         <p class="deskripsi-card"> dingin </p>
         <p class="menu-card-price">IDR 4k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -215,7 +223,7 @@
         <h3 class="menu-card-title">- Es Teh Manis -</h3>
         <p class="deskripsi-card"> dingin/panas </p>
         <p class="menu-card-price">IDR 4k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
       <div data-aos="fade-down"
       data-aos-easing="linear"
@@ -224,12 +232,46 @@
         <h3 class="menu-card-title">- Pancong Lumer -</h3>
         <p class="deskripsi-card"> coklat keju lumer </p>
         <p class="menu-card-price">IDR 10k</p> 
-                  <a href="#"><i data-feather="shopping-cart"></i></a>
+                  
       </div>
     </div>
     </section>
 
     <!--menu section end-->
+
+     <!-- Products Section start -->
+  <section class="products" id="products" x-data="products">
+    <h2 h2 data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"><span>Pesan</span> Disini</h2>
+    <p data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"> Berikut adalah beberapa pilihan menu yang warung kami sediakan: </p>
+
+    <div data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom" class="row">
+    <template x-for="(item, index) in items" x-key="index">
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="`img/products/1.jpg`" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>indomie goreng</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 10K <span>IDR 15K</span></div>
+      </div>
+      </template>
+    </div>
+  </section>
+
+  <!-- Products Section end -->
 
     <!-- contact section start -->
     <section id="contact" class="contact">
