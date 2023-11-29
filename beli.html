@@ -24,6 +24,9 @@
     <!--AlpineJs-->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!--apps-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="src/app.js"></script>
   </head>
 
@@ -76,25 +79,25 @@
     <h4 x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.total)"></span></h4>
 
     <div class="form-container" x-show="$store.cart.items.length">
-      <form action="" id="checkoutForm">
+      <form id="checkoutForm">
         <h5>Customer Detail</h5>
 
         <label for="name">
           <span>Nama</span>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" required>
         </label>
 
         <label for="email">
           <span>email</span>
-          <input type="email" Email="email" id="email">
+          <input type="email" Email="email" id="email" required>
         </label>
 
         <label for="phone">
           <span>No.telp</span>
-          <input type="number" name="phone" id="phone" autocomplete="off">
+          <input type="number" name="phone" id="phone" autocomplete="off" required>
         </label>
         
-        <button class="checkout-button" type="submit" id="checkout-button" value="Checkout">Checkout</button>
+        <button class="checkout-button" type="button" id="checkout-button" @click="$store.cart.order()" value="Checkout">Checkout</button>
       </form>
     </div>
   </div>

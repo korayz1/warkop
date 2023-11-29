@@ -23,4 +23,16 @@ document.addEventListener("click", function (e) {
   }
 });
 
+function showAlert() {
+  const name = document.getElementById("name").value
+  const email = document.getElementById("email").value
+  const number = document.getElementById("phone").value
+
+  Swal.fire({
+    icon: "success",
+    title: "Horee!! ",
+    text: `Hallo ${name} orderan anda sudah di terima`,
+  });
+
+}
 

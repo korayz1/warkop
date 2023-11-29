@@ -50,11 +50,11 @@ document.addEventListener("alpine:init", () => {
       // ambil item yang mau di remove berdasarkan idnya
       const cartItem = this.items.find((item) => item.id === id);
       //jika item lebih dari 1
-      if(cartItem.quantity > 1) {
+      if (cartItem.quantity > 1) {
         //telusuri 1 1
         this.items = this.items.map((item) => {
-          //jika bkan barang yang di klik 
-          if(item.id !== id) {
+          //jika bkan barang yang di klik
+          if (item.id !== id) {
             return item;
           } else {
             item.quantity--;
@@ -70,6 +70,29 @@ document.addEventListener("alpine:init", () => {
         this.quantity--;
         this.total -= cartItem.price;
       }
+    },
+    order() {
+      const orders = this.items;
+
+      // Format pesan WhatsApp dengan daftar pesanan
+      let message = `Halo, saya ingin memesan:\n `;
+
+      for (const order of orders) {
+        message += `${order.quantity} ${order.name}(s) - Rp ${order.price}\n`;
+      }
+
+      message += `Dengan total ${this.total}`;
+      // Nomor WhatsApp tujuan
+      const phoneNumber = "6285691894624";
+
+      // Buat tautan WhatsApp dengan pesan
+      const whatsappLink = `https://wa.me/${phoneNumber}/?text=${encodeURIComponent(
+        message
+      )}`;
+
+      // Buka tautan WhatsApp
+      window.location.href = whatsappLink;
+      //
     },
   });
 });
